@@ -106,7 +106,7 @@ const HomeSection = () => {
       >
         <div>
           <motion.img
-            src="/uditi.jpg"
+            src="uditi.jpg"
             alt="Profile"
             className="mx-auto rounded-full w-64 h-64 object-cover mb-8 shadow-xl"
             whileHover={{ scale: 1.1 }}
