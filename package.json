@@ -1,8 +1,8 @@
 {
-  "homepage": "https://uditisharmaaa.github.io/portfolio",
+  "homepage": "https://uditisharmaaa.github.io/portfolio/",
   "name": "portfolio",
   "version": "0.1.0",
-  "private": true,
+  "private": false,
   "dependencies": {
     "cra-template": "1.2.0",
     "marked": "^15.0.3",

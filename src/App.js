@@ -6,8 +6,9 @@ import BlogPostPage from "./BlogPostPage"; // Individual blog post page
 
 const App = () => {
   return (
-    <Router>
+    <Router basename="/portfolio"> {/* Add the basename for GitHub Pages */}
       <Routes>
+        {/* Ensure all paths match the basename */}
         <Route path="/" element={<Portfolio />} />
         <Route path="/blog" element={<BlogSection />} />
         <Route path="/blog/:id" element={<BlogPostPage />} />
