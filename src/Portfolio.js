@@ -106,7 +106,7 @@ const HomeSection = () => {
       >
         <div>
           <motion.img
-            src="uditi.jpg"
+            src={`${process.env.PUBLIC_URL}/uditi.jpg`}
             alt="Profile"
             className="mx-auto rounded-full w-64 h-64 object-cover mb-8 shadow-xl"
             whileHover={{ scale: 1.1 }}
@@ -155,7 +155,7 @@ const ProjectsSection = () => {
         "Web app made for Communications Lab website that gives a video guided tour of the various locations to get food in NYUAD campus. Includes an interactive guide of the campus along with personal favorite food items.",
       technologies: ["HTML/CSS/JS", "Figma", "iMovie", "Prototyping"],
       category: "Technical",
-      image: "/foodtour.png", 
+      image: `${process.env.PUBLIC_URL}/foodtour.png`, 
     },
     {
       title: "Interactive Comic",
@@ -163,7 +163,7 @@ const ProjectsSection = () => {
         "Interactive murder mystery comic made using Adobe Photoshop. Users get to find hidden clues in the comic and change decide the ending based on outcomes.",
       technologies: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
       category: "Creative",
-      image: "/comic.png", 
+      image: `${process.env.PUBLIC_URL}/comic.png`, 
     },
     {
       title: "Interactive Sound Project",
@@ -171,7 +171,7 @@ const ProjectsSection = () => {
         "Produced and edited a soundscape showing the various stages of grief along with an interactive website for complete immersive experience.",
       technologies: ["Premiere Pro", "Audacity"],
       category: "Creative",
-      image: "/stages.png", 
+      image: `${process.env.PUBLIC_URL}/stages.png`, 
     },
     {
       title: "Interactive Short Film",
@@ -179,7 +179,7 @@ const ProjectsSection = () => {
         "Produced and edited a choose your own adventure style short film highlighting healthy living habits for college students.",
       technologies: ["Premiere Pro", "Figma", "Tailwind CSS", "React"],
       category: "Film",
-      image: "/film.png",
+      image: `${process.env.PUBLIC_URL}/film.png`,
     },
   ];
 
