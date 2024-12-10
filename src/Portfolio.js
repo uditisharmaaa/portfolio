@@ -155,7 +155,8 @@ const ProjectsSection = () => {
         "Web app made for Communications Lab website that gives a video guided tour of the various locations to get food in NYUAD campus. Includes an interactive guide of the campus along with personal favorite food items.",
       technologies: ["HTML/CSS/JS", "Figma", "iMovie", "Prototyping"],
       category: "Technical",
-      image: `${process.env.PUBLIC_URL}/foodtour.png`, 
+      image: `${process.env.PUBLIC_URL}/foodtour.png`,
+      link: "https://uditisharmaaa.github.io/website1/commlab1/index.html", 
     },
     {
       title: "Interactive Comic",
@@ -163,7 +164,8 @@ const ProjectsSection = () => {
         "Interactive murder mystery comic made using Adobe Photoshop. Users get to find hidden clues in the comic and change decide the ending based on outcomes.",
       technologies: ["Figma", "Adobe Photoshop", "Adobe Illustrator"],
       category: "Creative",
-      image: `${process.env.PUBLIC_URL}/comic.png`, 
+      image: `${process.env.PUBLIC_URL}/comic.png`,
+      link: "https://ivan-si.github.io/InteractiveComic/", 
     },
     {
       title: "Interactive Sound Project",
@@ -171,7 +173,8 @@ const ProjectsSection = () => {
         "Produced and edited a soundscape showing the various stages of grief along with an interactive website for complete immersive experience.",
       technologies: ["Premiere Pro", "Audacity"],
       category: "Creative",
-      image: `${process.env.PUBLIC_URL}/stages.png`, 
+      image: `${process.env.PUBLIC_URL}/stages.png`,
+      link: "https://ivan-si.github.io/SoundProjectCommLab/", 
     },
     {
       title: "Interactive Short Film",
@@ -180,6 +183,7 @@ const ProjectsSection = () => {
       technologies: ["Premiere Pro", "Figma", "Tailwind CSS", "React"],
       category: "Film",
       image: `${process.env.PUBLIC_URL}/film.png`,
+      link: "https://ivan-si.github.io/SoundProjectCommLab/", 
     },
   ];
 
@@ -224,35 +228,45 @@ const ProjectsSection = () => {
         {/* Projects Grid */}
         <div className="grid md:grid-cols-2 gap-8">
           {filteredProjects.map((project, index) => (
-            <motion.div
+            <a
+              href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
               key={index}
-              className="bg-white/60 backdrop-blur-md rounded-xl p-6 shadow-lg"
-              whileHover={{ scale: 1.05, boxShadow: "0 10px 20px rgba(0,0,0,0.1)" }}
+              className="no-underline"
             >
-              {/* Project Image */}
-              <img
-                src={project.image}
-                alt={project.title}
-                className="rounded-t-xl object-cover h-70 w-full mb-4"
-              />
-              {/* Project Title */}
-              <h3 className="text-2xl font-semibold text-blue-800 mb-4">
-                {project.title}
-              </h3>
-              {/* Project Description */}
-              <p className="text-blue-700 mb-4">{project.description}</p>
-              {/* Technologies */}
-              <div className="flex flex-wrap gap-2">
-                {project.technologies.map((tech, idx) => (
-                  <span
-                    key={idx}
-                    className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            </motion.div>
+              <motion.div
+                className="bg-white/60 backdrop-blur-md rounded-xl p-6 shadow-lg"
+                whileHover={{
+                  scale: 1.05,
+                  boxShadow: "0 10px 20px rgba(0,0,0,0.1)",
+                }}
+              >
+                {/* Project Image */}
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="rounded-t-xl object-cover h-70 w-full mb-4"
+                />
+                {/* Project Title */}
+                <h3 className="text-2xl font-semibold text-blue-800 mb-4">
+                  {project.title}
+                </h3>
+                {/* Project Description */}
+                <p className="text-blue-700 mb-4">{project.description}</p>
+                {/* Technologies */}
+                <div className="flex flex-wrap gap-2">
+                  {project.technologies.map((tech, idx) => (
+                    <span
+                      key={idx}
+                      className="bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm"
+                    >
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              </motion.div>
+            </a>
           ))}
         </div>
       </motion.div>
